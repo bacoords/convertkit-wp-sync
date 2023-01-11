@@ -13,3 +13,13 @@
  */
 
 // Your code starts here.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+
+if ( class_exists( 'ConvertKit_Settings' ) ) {
+	require_once __DIR__ . '/classes/class-convertkit-wp-sync.php';
+	new Convertkit_Wp_Sync();
+}
+
